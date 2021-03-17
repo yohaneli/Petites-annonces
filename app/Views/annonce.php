@@ -26,26 +26,36 @@
                 <form action="/register/save" method="post">
 
                     <div class="mb-3">
-                        <label for="InputForName" class="form-label">Nom et Prénom</label>
+                        <label for="InputForName" class="form-label">Titre</label>
                         <input type="text" name="name" class="form-control" id="InputForName" value="<?= set_value('name') ?>">
                     </div>
 
                     <div class="mb-3">
-                        <label for="InputForEmail" class="form-label">Adresse mail</label>
-                        <input type="email" name="email" class="form-control" id="InputForEmail" value="<?= set_value('email') ?>">
+                        <label for="InputForName" class="form-label">Description</label>
+                        <input type="text" name="name" class="form-control" id="InputForName" value="<?= set_value('name') ?>">
                     </div>
 
                     <div class="mb-3">
-                        <label for="InputForPassword" class="form-label">Mot de passe</label>
-                        <input type="password" name="password" class="form-control" id="InputForPassword">
+                        <label for="InputForName" class="form-label">Auteur</label>
+                        <input type="text" name="name" class="form-control" id="InputForName" value="<?= set_value('name') ?>">
                     </div>
 
                     <div class="mb-3">
-                        <label for="InputForConfPassword" class="form-label">Confirmez le mot de passe</label>
-                        <input type="password" name="confpassword" class="form-control" id="InputForConfPassword">
+                        <label for="InputForName" class="form-label">Image</label>
+                        <input type="text" name="name" class="form-control" id="InputForName" value="<?= set_value('name') ?>">
                     </div>
 
-                    <button type="submit" class="btn btn-primary">S'inscrire</button>
+                    <div class="mb-3">
+                        <label for="InputForName" class="form-label">Prix</label>
+                        <input type="text" name="name" class="form-control" id="InputForName" value="<?= set_value('name') ?>">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="InputForName" class="form-label">Date</label>
+                        <input type="text" name="name" class="form-control" id="InputForName" value="<?= set_value('name') ?>">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Publier</button>
                     <br><br>
                 </form>
             </div>

@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
  
-    <title>Login</title>
+    <title>Connexion site petites annonces</title>
   </head>
   <body>
     <div class="container">
@@ -15,7 +15,7 @@
  
             <div class="col-12">
             <br><br>
-                <h1>Connexion au site de petites annonces</h1>
+                <h1 class="text-align: center">Connexion au site de petites annonces</h1>
                 <br><br>
 
                 <?php if(session()->getFlashdata('msg')):?>
@@ -34,8 +34,13 @@
                         <label for="InputForPassword" class="form-label">Password</label>
                         <input type="password" name="password" class="form-control" id="InputForPassword">
                     </div>
-<br><br>
-                    <button type="submit" class="btn btn-primary">Se connecter</button>
+                    
+                    <br>
+
+                    <div class="mb-3 text-align: center">
+                        <button type="submit" class="btn btn-primary">Se connecter</button>
+                    </div>
+
                     <br><br>
 
                 </form>
