@@ -104,7 +104,7 @@
 
                             <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><a href="<?php echo base_url('login') ; ?>">Connexion</h5></a>
 
-                            <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down">Ajouter une annonce</h5>
+                            <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><a href="<?php echo base_url('annonce') ; ?>">Ajouter une annonce</h5></a>
                             
                         </div>
 
@@ -127,46 +127,66 @@
                         <!--Flat Card With Redio & chips-->
                         <div id="card-with-radio-chips" class="section">
                             <h4 class="header">Listes des catégories</h4>
+                                
+
+                                <?php if (isset($tabCategories)) {  ?>
+
+                                    <?php  foreach ($tabCategories as $tabCategorie) {  ?>
                             <div class="row">
-                                <div class="col s12 m6 l4">
-                                    <div class="card deep-purple">
-                                        <div class="card-content white-text right-align pr-0">
-                                            <span class="card-title position-absolute">Video</span>
-                                            <img class="responsive-img" src="../../../app-assets/images/cards/camara.png" alt="images" />
+                                <div class="col s12 m4">
+                                    <div class="card blue-grey darken-1">
+                                        <div class="card-content white-text">
+                                        <span class="card-title"><?php echo $tabCategorie['NomCategorie'] ; ?></span>
                                         </div>
-                                        
-                                       
-                                    </div>
-                                </div>
-                                <div class="col s12 m6 l4">
-                                    <div class="card red darken-2">
-                                        <div class="card-content white-text right-align pr-0">
-                                            <span class="card-title position-absolute">Music</span>
-                                            <img class="responsive-img" src="../../../app-assets/images/cards/headphones.png" alt="images" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col s12 m6 l4">
-                                    <div class="card black">
-                                        <div class="card-content white-text right-align pr-0">
-                                            <span class="card-title position-absolute">iPad</span> <img class="responsive-img" src="../../../app-assets/images/cards/ipad.png" alt="images" />
-                                        </div>
-                                        
-                                        
+                                    
                                     </div>
                                 </div>
                             </div>
+
+                                    <?php } ?>
+
+                                <?php } ?>   
+
                         </div>
 
-                        <div class="divider mt-2"></div>
+                        <div id="card-with-radio-chips" class="section">
+                            <h4 class="header">Listes des annonces les plus récentes</h4>
+                                
+                                    <?php if (isset($tabAnnonces)) {  ?>
 
-                        <!--E-commerce Card-->
-                        
-                        <!--Food Card-->
+                                        <?php  foreach ($tabAnnonces as $tabAnnonce) {  
+                                            
+                                            $categories = $categoriesModel->where('IDCategorie',$tabAnnonce['IDCat'])->first();
 
-                    </div><!-- START RIGHT SIDEBAR NAV -->
-                   
-                    <!-- END RIGHT SIDEBAR NAV -->
+                                            $users = $usersModel->where('user_id',$tabAnnonce['IDUser'])->first();
+
+                                            ?>                                    
+
+                            <div class="row">
+                                <div class="col s12 m12">
+                                    <div class="card blue-grey darken-1">
+                                        <div class="card-content white-text">
+                                        <span class="card-title">Titre de l'annonce : <?php echo $tabAnnonce['TitreAnnonce'] ; ?></span>
+                                        <span class="card-title">Catégorie de l'annonce : <?php echo $categories['NomCategorie'] ; ?></span>
+                                        <span class="card-title">Description de l'annonce : <?php echo $tabAnnonce['DescriptionAnnonce'] ; ?></span>
+                                        <span class="card-title">Auteur de l'annonce : <?php echo $users['user_name'] ; ?></span>
+                                        <span class="card-title">Date de publication l'annonce : <?php echo $tabAnnonce['DateCreationAnnonce'] ; ?></span>
+                                        <a class="waves-effect waves-light btn-small"><i class="material-icons right">edit</i>Editer</a>
+                                        <a class="waves-effect waves-light btn-small"><i class="material-icons right">delete</i>Supprimer</a>
+                                        <a class="waves-effect waves-light btn-small"><i class="material-icons right">zoom_in</i>Voir plus</a>
+
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                                    <?php } ?>
+
+                                        <?php } ?> 
+
+                        </div>
+
+                    </div>
                     
                 </div>
                 <div class="content-overlay"></div>

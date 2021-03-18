@@ -2,7 +2,7 @@
  
 use CodeIgniter\Model;
  
-class UserModel extends Model{
+class AnnonceModel extends Model{
     protected $table = 'annonces';
-    protected $allowedFields = ['IDAnnonce ','IDCat','TitreAnnonce','DescriptionAnnnonce','AuteurAnnonce','ImageAnnonce','PrixAnnonce','DateCreationAnnonce'];
+    protected $allowedFields = ['IDAnnonce ','IDCat','TitreAnnonce','DescriptionAnnonce','IDUser','ImageAnnonce','PrixAnnonce','DateCreationAnnonce'];
 }

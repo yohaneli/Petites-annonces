@@ -20,6 +20,13 @@ use Psr\Log\LoggerInterface;
 
 class BaseController extends Controller
 {
+
+	public function __construct(){
+		
+		//include helper form
+        helper('form');
+		
+	}
 	/**
 	 * An array of helpers to be loaded automatically upon
 	 * class instantiation. These helpers will be available

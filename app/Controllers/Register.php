@@ -18,7 +18,7 @@ class Register extends Controller
 
     }
  
-    public function save()
+    public function createUser()
     {
         
         helper(['form']);

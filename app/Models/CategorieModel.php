@@ -2,7 +2,7 @@
  
 use CodeIgniter\Model;
  
-class UserModel extends Model{
+class CategorieModel extends Model{
     protected $table = 'categories';
-    protected $allowedFields = ['IDCategorie','NomCategorie','IconeCategorie','DateCreationCategorie'];
+    protected $allowedFields = ['IDCategorie','NomCategorie','DateCreationCategorie'];
 }

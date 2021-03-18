@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
  
-    <title>Inscription site petites annonces</title>
+    <title>S'inscrire</title>
   </head>
   <body>
     <div class="container">
@@ -15,7 +15,7 @@
  
             <div class="col-12">
             <br><br>
-                <h1 class="text-align: center">Inscription sur le site de petites annonces</h1>
+                <h1 class="text-align: center">S'inscrire</h1>
 
                 <?php if(isset($validation)):?>
 
@@ -23,7 +23,7 @@
 
                 <?php endif;?>
 
-                <form action="/register/save" method="post">
+                <form action="/register/createUser" method="post">
 
                     <div class="mb-3">
                         <label for="InputForName" class="form-label">Nom et Prénom</label>
@@ -45,8 +45,11 @@
                         <input type="password" name="confpassword" class="form-control" id="InputForConfPassword">
                     </div>
 
-                    <button type="submit" class="btn btn-primary">S'inscrire</button>
-                    <br><br>
+                    <div class="mb-3 text-align: center">
+                    <br>
+                        <button type="submit" class="btn btn-primary">S'inscrire</button>
+                    </div>
+                    <br>
                 </form>
             </div>
              
