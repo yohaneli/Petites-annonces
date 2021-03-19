@@ -33,7 +33,28 @@
     <!-- BEGIN: Header-->
     <header class="page-topbar" id="header">
         <div class="navbar navbar-fixed">
-            
+
+                            <h5><a href="<?php echo base_url() ; ?>">Accueil</h5></a>
+
+                            <?php if(empty(session()->get('user_id'))) { ?>
+                            
+                            <h5><a href="<?php echo base_url('register') ; ?>">Inscription</h5></a>
+
+                            <h5><a href="<?php echo base_url('login') ; ?>">Connexion</h5></a>
+                            
+                            <?php } else { ?>
+
+                                <h5><a href="<?php echo base_url('moncompte') ; ?>">Mon compte</h5></a>
+
+                                <h5><a href="<?php echo base_url('login/logout') ; ?>">Déconnexion</h5></a>
+
+                            <?php } ?>
+
+                            <h5><a href="<?php echo base_url('annonce') ; ?>">Ajouter une annonce</h5></a>
+                            
+
+
+
         </div>
     </header>
     <!-- END: Header-->

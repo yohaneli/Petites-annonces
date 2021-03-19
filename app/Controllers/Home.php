@@ -6,6 +6,8 @@ use App\Models\CategorieModel;
 use App\Models\AnnonceModel;
 use App\Models\UserModel;
 
+// Controleur de la page d'accueil
+
 class Home extends BaseController {
 
 	public $categoriesModel = null ;
@@ -24,15 +26,26 @@ class Home extends BaseController {
 
 	}
 
-	public function index() {
+	public function index($idCat=null) {
+
+		//fonction qui selectionne toutes les catégories et toutes les annonces
+
+		$annonceParCategorie = $this->annoncesModel->orderBy('IDAnnonce','DESC')->paginate(3);
+
+			if (!empty($idCat)) {
+
+				$annonceParCategorie = $this->annoncesModel->where('IDCat',$idCat)->orderBy('IDAnnonce','DESC')->paginate(3);
+
+			}
 
 		$listCategories = $this->categoriesModel->findAll();
 
 		$listAnnonces = $this->annoncesModel->orderBy('TitreAnnonce','ASC')->findAll();
-
+		
 		$data = [
 			'tabCategories' => $listCategories,
-			'tabAnnonces'	=> $listAnnonces,
+			'tabAnnonces'	=> $annonceParCategorie,
+			'pager' => $this->annoncesModel->pager,
 			'usersModel' => $this->usersModel,
 			'categoriesModel' => $this->categoriesModel,
 		];

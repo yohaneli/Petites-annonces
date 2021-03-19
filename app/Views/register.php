@@ -17,6 +17,12 @@
             <br><br>
                 <h1 class="text-align: center">S'inscrire</h1>
 
+                <h5>Si vous êtes déjà inscrit, connectez-vous ici !</h5> 
+                <br>
+                  <a href="<?php echo base_url('login') ; ?>" class="waves-effect waves-light btn-small">Se connecter</a>
+
+                
+
                 <?php if(isset($validation)):?>
 
                     <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
@@ -26,6 +32,7 @@
                 <form action="/register/createUser" method="post">
 
                     <div class="mb-3">
+                    <br>
                         <label for="InputForName" class="form-label">Nom et Prénom</label>
                         <input type="text" name="name" class="form-control" id="InputForName" value="<?= set_value('name') ?>">
                     </div>

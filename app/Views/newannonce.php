@@ -26,7 +26,7 @@
 
                 <?php //var_dump(session('user_name')); ?>
 
-                <form action="/annonce/createAnnonce" method="post">
+                <form action="/annonce/createAnnonce" method="post" enctype="multipart/form-data" >
 
                 <div class="mb-3">
                         <select name="categorie">

@@ -16,7 +16,10 @@
             <div class="col-12">
             <br><br>
                 <h1 class="text-align: center">Connexion au site de petites annonces</h1>
-                <br><br>
+                <h5>Si vous êtes déjà inscrit, connectez-vous ici !</h5> 
+                <br>
+                  <a href="<?php echo base_url('register') ; ?>" class="waves-effect waves-light btn-small">S'incrire</a>
+
 
                 <?php if(session()->getFlashdata('msg')):?>
 
@@ -25,13 +28,13 @@
                 <?php endif;?>
 
                 <form action="/login/auth" method="post">
-
+                    <br>
                     <div class="mb-3">Adresse mail</label>
                         <input type="email" name="email" class="form-control" id="InputForEmail" value="<?= set_value('email') ?>">
                     </div>
 
                     <div class="mb-3">
-                        <label for="InputForPassword" class="form-label">Password</label>
+                        <label for="InputForPassword" class="form-label">Mot de passe</label>
                         <input type="password" name="password" class="form-control" id="InputForPassword">
                     </div>
                     

@@ -9690,10 +9690,10 @@ nav.display-none.search-sm .nav-wrapper form .input-field i
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
 {
-    .sidenav .collapsible-header
+    /* .sidenav .collapsible-header
     {
-        /* Sidebar nav open close icons*/
-    }
+         Sidebar nav open close icons
+    } */
     .sidenav .collapsible-header:after
     {
         width: 0;
@@ -9889,11 +9889,11 @@ nav.display-none.search-sm .nav-wrapper form .input-field i
     border-bottom: 1px solid #f5f5f5;
 }
 
-#activity
+/* #activity
 {
-    /* Timeline  */
-    /* -------- */
-}
+     Timeline  
+    -------- 
+} */
 
 #activity .widget-timeline
 {
@@ -10731,10 +10731,10 @@ Cards
 
     display: block;
 
-    -webkit-transform: rotate(90deg);
+    /* -webkit-transform: rotate(90deg);
        -moz-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
-         -o-transform: rotate(90deg);
+         -o-transform: rotate(90deg); */
 }
 
 #flight-card .card-content-bg

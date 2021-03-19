@@ -2,11 +2,14 @@
  
 use CodeIgniter\Controller;
 use App\Models\UserModel;
+
+//controleur qui gère la connexion d'un utilisateur
  
 class Login extends Controller
 {
     public function index()
     {
+        //fonction qui affiche le formulaire de connexion
 
         helper(['form']);
 
@@ -18,7 +21,8 @@ class Login extends Controller
  
     public function auth()
     {
-        
+        // fonction qui connecte  l'utilisateur
+
         $session = session();
 
         $model = new UserModel();
@@ -66,6 +70,8 @@ class Login extends Controller
 
     }
  
+    // fonction qui déconnecte
+
     public function logout()
     {
         

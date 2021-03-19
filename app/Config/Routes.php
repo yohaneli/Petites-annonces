@@ -34,8 +34,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/moncompte', 'MonCompte::index',['filter' => 'auth']);
-$routes->get('/newannonce', 'Newannonce::index',['filter' => 'auth']);
-$routes->get('/editannonce', 'Editannonce::index',['filter' => 'auth']);
+$routes->get('/annonce/createannonce', 'Annonce::createAnnonce',['filter' => 'auth']);
 
 
 /*
